@@ -28,6 +28,7 @@ You will create two types of endpoints to access Amazon S3: a Gateway VPC endpoi
 3. [Creating a Budget Alarm](5.3-S3-vpc/)
 4. [Amazon RDS](5.4-S3-onprem/)
 5. [Amazon DynamoDB](5.5-Policy/)
-6. [AWS Lambda](5.6-Cleanup/)
-7. Amazon API Gateway
-8. Amazon S3
+6. [AWS Lambda](5.6-Lambda/)
+7. [Amazon API Gateway](5.7-API-Gateway/)
+8. [Amazon S3](5.8-S3/)
+9. [Clean up](5.6-Cleanup/)

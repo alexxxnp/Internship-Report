@@ -30,7 +30,7 @@ Chúng ta sẽ tạo hai loại endpoints để truy cập đến Amazon S3: gat
 3. [Tạo cảnh báo ngân sách](5.3-S3-vpc/)
 4. [Amazon RDS](5.4-S3-onprem/)
 5. [Amazon DynamoDB](5.5-Policy/)
-6. AWS Lambda
-7. Amazon API Gateway
-8. Amazon S3
+6. [AWS Lambda](5.6-Lambda/)
+7. [Amazon API Gateway](5.7-API-Gateway/)
+8. [Amazon S3](5.8-S3/)
 9. [Dọn dẹp tài nguyên](5.6-Cleanup/)
