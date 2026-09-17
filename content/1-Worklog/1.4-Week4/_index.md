@@ -5,9 +5,7 @@ weight: 4
 chapter: false
 pre: " <b> 1.4. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
+
 
 ### Week 4 Objectives:
 * Gain in-depth understanding of AWS Identity and Access Management (IAM).

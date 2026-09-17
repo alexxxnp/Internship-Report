@@ -5,27 +5,18 @@ weight: 1
 chapter: false
 pre: " <b> 3.2. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+# Understanding techniques to reduce AWS Lambda costs in serverless applications
+1. Thách thức vận hành
+Mặc dù kiến trúc Serverless (không máy chủ) giúp giảm chi phí nhờ mô hình chỉ trả tiền khi sử dụng (pay-per-use), các ứng dụng có lượng truy vấn cao vẫn có thể phát sinh chi phí AWS Lambda lớn nếu không được tối ưu đúng cách. Thách thức chính nằm ở việc thiết lập cấu hình tài nguyên (Memory/CPU) phù hợp, chọn đúng kiến trúc chip xử lý và tránh lãng phí thời gian thực thi code mà không cần phải viết lại toàn bộ ứng dụng.
+2. Giải pháp kỹ thuật & Công cụ tối ưu
+Bài viết trên AWS Compute Blog hướng dẫn các chiến lược tối ưu chi phí Lambda tập trung vào cấu hình:
+- AWS Lambda Power Tuning: Công cụ mã nguồn mở chạy thử nghiệm hàm Lambda ở nhiều mức dung lượng RAM (từ 128MB đến 10,240MB) để tìm điểm cân bằng "sweet spot" giữa thời gian chạy và chi phí.
+- Chuyển đổi sang vi xử lý AWS Graviton2 (Arm-based): Thay đổi kiến trúc chip thực thi từ x86 sang Arm giúp tăng hiệu năng lên tới 19% trong khi chi phí giảm thêm 20%.
+- AWS Compute Optimizer: Dịch vụ phân tích dữ liệu lịch sử vận hành (qua Machine Learning) để đưa ra đề xuất cấu hình bộ nhớ tối ưu cho các ứng dụng đã chạy trên môi trường Production.
+3. Giá trị mang lại
+- Tiết kiệm chi phí trực tiếp: Giảm tới 20%–34% chi phí tính toán Lambda chỉ bằng việc thay đổi cấu hình phần cứng (chuyển sang Graviton2) mà không cần sửa đổi mã nguồn.
+- Tối ưu hiệu năng: Việc điều chỉnh đúng dung lượng RAM giúp tăng tỷ lệ CPU tương ứng, giảm thời gian thực thi (duration) và cải thiện tốc độ phản hồi cho end-user.
+- Ra quyết định dựa trên dữ liệu: Loại bỏ việc đoán mò cấu hình hạ tầng nhờ các công cụ benchmark tự động.
 
-# SESSION POLICIES TRONG AMAZON EKS POD IDENTITY
-
-Amazon EKS Pod Identity vừa bổ sung tính năng session policies, cho phép bạn thu hẹp quyền IAM một cách linh hoạt và chính xác cho từng pod mà không cần tạo thêm nhiều IAM roles riêng biệt. Đây là bước tiến quan trọng giúp áp dụng nguyên tắc least privilege hiệu quả hơn trong môi trường Kubernetes quy mô lớn.
-
-Các điểm chính cần nắm:
-
-* Session policy là một IAM policy inline được chỉ định khi tạo hoặc cập nhật Pod Identity association.
-* Quyền hiệu quả = intersection (giao) giữa permissions của IAM role và session policy → session policy chỉ có thể thu hẹp, không thể mở rộng quyền.
-* Giúp tránh tình trạng over-permissioning khi reuse chung một IAM role cho nhiều workloads có nhu cầu khác nhau.
-* Hỗ trợ cả same-account và cross-account (qua IAM role chaining).
-* Giảm đáng kể số lượng IAM roles cần quản lý, tránh chạm giới hạn quota IAM trong cluster lớn.
-* Cấu hình dễ dàng qua AWS Management Console, AWS CLI hoặc AWS SDK khi tạo association giữa Kubernetes ServiceAccount và IAM role.
-
-Tính năng này đặc biệt hữu ích khi bạn có nhiều ứng dụng chạy trên cùng một IAM role nhưng cần giới hạn quyền khác nhau (ví dụ: một pod chỉ đọc S3 bucket cụ thể, pod khác chỉ gọi một số API nhất định).
-
-...Hình ảnh...
-
-...Link...
-
-...Hướng dẫn...
+📌 Nguồn bài viết gốc: https://aws.amazon.com/vi/blogs/compute/understanding-techniques-to-reduce-aws-lambda-costs-in-serverless-applications/
+![Blog 2](/images/5-Workshop/3.5.jpg)

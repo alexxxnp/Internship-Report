@@ -8,9 +8,7 @@ chapter: false
     
 # Internship Report
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
+
 
 ### Student Information:
 &emsp; **Full Name:** Nguyen Van Chien
@@ -31,7 +29,7 @@ chapter: false
 
 &emsp; **Internship Duration:** From 01/06/2026 to 31/08/2026
 
-![Your profile picture](/images/avatar.png)
+![Your profile picture](/images/5-Workshop/0.4.jpg)
 
 ### Report Content
 

@@ -5,27 +5,17 @@ weight: 1
 chapter: false
 pre: " <b> 3.2. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
-
-# SESSION POLICIES IN AMAZON EKS POD IDENTITY
-
-Amazon EKS Pod Identity has recently added the session policies feature, allowing you to narrow IAM permissions flexibly and precisely for each pod without needing to create many separate IAM roles. This is an important step forward that helps apply the principle of least privilege more effectively in large-scale Kubernetes environments.
-
-Key points to know:
-
-* A session policy is an inline IAM policy specified when creating or updating a Pod Identity association.
-* Effective permissions = intersection between the IAM role permissions and the session policy → the session policy can only narrow permissions, not expand them.
-* Helps avoid over-permissioning when reusing a single IAM role for multiple workloads with different needs.
-* Supports both same-account and cross-account (via IAM role chaining).
-* Significantly reduces the number of IAM roles that need to be managed, helping avoid hitting IAM quota limits in large clusters.
-* Easily configured through the AWS Management Console, AWS CLI, or AWS SDK when creating an association between a Kubernetes ServiceAccount and an IAM role.
-
-This feature is especially useful when you have many applications running on the same IAM role but need different permission restrictions (for example: one pod only reads a specific S3 bucket, another pod only calls certain APIs).
-
-...Image...
-
-...Link...
-
-...Guide...
+# Understanding techniques to reduce AWS Lambda costs in serverless applications
+1. Operational Challenges
+Although serverless architecture reduces costs through a pay-per-use model, high-demand applications can still incur significant AWS Lambda costs if not properly optimized. The main challenge lies in configuring resources (Memory/CPU) appropriately, selecting the right processor architecture, and avoiding wasted time executing code without having to rewrite the entire application.
+2. Technical Solutions & Optimization Tools
+This AWS Compute Blog post guides you through Lambda cost optimization strategies focused on configuration:
+- AWS Lambda Power Tuning: An open-source tool that runs Lambda function tests at various RAM capacities (from 128MB to 10,240MB) to find the "sweet spot" between runtime and cost.
+- Switching to AWS Graviton2 (Arm-based) processors: Changing the execution chip architecture from x86 to Arm increases performance by up to 19% while reducing costs by an additional 20%.
+- AWS Compute Optimizer: A service that analyzes historical operational data (via Machine Learning) to provide recommendations for optimal memory configurations for applications running in a Production environment.
+3. Value Proposition
+- Direct cost savings: Reduce Lambda computation costs by up to 20%–34% simply by changing hardware configuration (switching to Graviton2) without modifying the source code.
+- Performance optimization: Properly adjusting RAM capacity increases CPU utilization, reduces execution time (duration), and improves response speed for end-users.
+- Data-driven decision-making: Eliminate guesswork in infrastructure configuration thanks to automated benchmarking tools.
+📌 Original article source: https://aws.amazon.com/vi/blogs/compute/understanding-techniques-to-reduce-aws-lambda-costs-in-serverless-applications/
+![Blog 2](/images/5-Workshop/3.5.jpg)

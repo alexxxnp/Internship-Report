@@ -5,9 +5,7 @@ weight: 12
 chapter: false
 pre: " <b> 1.12. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
+
 
 ### Week 12 Objectives:
 * Conduct Security, Performance, and Cost Optimization audits adhering to the AWS Well-Architected Framework.

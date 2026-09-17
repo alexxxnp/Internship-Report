@@ -5,9 +5,7 @@ weight: 9
 chapter: false
 pre: " <b> 1.9. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+
 
 ### Mục tiêu tuần 9:
 * Khai phá tư duy Cơ sở hạ tầng dưới dạng mã (Infrastructure as Code - IaC) với AWS CloudFormation.

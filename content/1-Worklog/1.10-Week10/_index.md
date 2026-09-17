@@ -5,9 +5,7 @@ weight: 10
 chapter: false
 pre: " <b> 1.10. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
+
 
 ### Week 10 Objectives:
 * Learn Cloud Monitoring and Centralized Logging using Amazon CloudWatch.

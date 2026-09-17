@@ -5,27 +5,20 @@ weight: 1
 chapter: false
 pre: " <b> 3.3. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
+# AI-assisted game production: From static concept to interactive prototype
+1. Operational Challenges
+Traditional game development processes are very time-consuming in the early stages: teams spend weeks brainstorming concepts, months designing, and countless hours programming logic to create a playable demo. The biggest challenge is that validation often happens too late in the development cycle, making modifications or changes to the creative pivot incredibly costly and time-consuming.
 
-# SESSION POLICIES IN AMAZON EKS POD IDENTITY
+2. Architectural Solutions
+An article on the AWS for Games Blog suggests a solution using Artificial Intelligence (Generative AI) on a cloud platform to accelerate the interactive prototyping process:
+Amazon Bedrock: A central platform providing innovative AI models that quickly generate game resources (text, logic, design ideas, assets) from static concepts.
+Serverless & Compute Infrastructure: Utilize AWS Fargate, AWS Lambda, and Amazon API Gateway to run AI logic-processing backend services flexibly without managing servers.
+Data & Distribution Layer: Combine Amazon DynamoDB, Amazon S3, and Amazon EFS to store game state/resources, and Amazon CloudFront for rapid delivery of demo versions to studios or testers.
 
-Amazon EKS Pod Identity has recently added the session policies feature, allowing you to narrow IAM permissions flexibly and precisely for each pod without needing to create many separate IAM roles. This is an important step forward that helps apply the principle of least privilege more effectively in large-scale Kubernetes environments.
+3. Value Proposition
+Shortened Development Cycle: Automate the transition from static ideas to interactive prototypes, allowing game studios to test and verify gameplay mechanics in days instead of months.
+Optimized Creativity: Enable developers to experiment with various art styles and gameplay approaches at extremely low cost before deciding to invest in full-scale production.
+Rapid Demo Delivery: Leverage AWS cloud infrastructure to deploy interactive prototypes directly to browsers or test devices securely and smoothly. 
 
-Key points to know:
-
-* A session policy is an inline IAM policy specified when creating or updating a Pod Identity association.
-* Effective permissions = intersection between the IAM role permissions and the session policy → the session policy can only narrow permissions, not expand them.
-* Helps avoid over-permissioning when reusing a single IAM role for multiple workloads with different needs.
-* Supports both same-account and cross-account (via IAM role chaining).
-* Significantly reduces the number of IAM roles that need to be managed, helping avoid hitting IAM quota limits in large clusters.
-* Easily configured through the AWS Management Console, AWS CLI, or AWS SDK when creating an association between a Kubernetes ServiceAccount and an IAM role.
-
-This feature is especially useful when you have many applications running on the same IAM role but need different permission restrictions (for example: one pod only reads a specific S3 bucket, another pod only calls certain APIs).
-
-...Image...
-
-...Link...
-
-...Guide...
+📌 Original article source: https://aws.amazon.com/vi/blogs/gametech/ai-assisted-game-production-from-static-concept-to-interactive-prototype/
+![Blog 3](/images/5-Workshop/3.6.jpg)

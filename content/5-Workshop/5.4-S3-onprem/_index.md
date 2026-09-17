@@ -8,13 +8,20 @@ pre : " <b> 5.4. </b> "
 
 #### Overview
 
-+ In this section, you will create an Interface endpoint to access Amazon S3 from a simulated on-premises environment. The Interface endpoint will allow you to route to Amazon S3 over a VPN connection from your simulated on-premises environment.
+In this section, you create a database with Amazon Aurora and Amazon RDS.
+Amazon RDS provides managed relational database operations, while the selected network settings determine whether the database is publicly reachable or isolated inside the VPC. For this workshop, review the connectivity and security settings carefully before creating the instance.
+![Aurora and RDS](/images/5-Workshop/4.jpg)
+1. Choose **Create database** to create a new database.
+![Create database](/images/5-Workshop/4.1.jpg)
+2. Select **Full configuration**.
+![Create database](/images/5-Workshop/4.2.jpg)
+3. Select **MySQL**.
+![Create database](/images/5-Workshop/4.3.jpg)
+4. Under **Choose a database creation method**, select **Easy create** for a personal project. In **Configuration**, select **Easy tier** and enter the name in **DB instance identifier**.
+![Create database](/images/5-Workshop/4.4.jpg)
+5. Keep the master username as `admin`. Under **Credentials management**, keep **Self managed** if you want to provide a password.
+![Create database](/images/5-Workshop/4.5.jpg)
+6. Choose **Create database**.
+![Create database](/images/5-Workshop/4.6.jpg)
 
-+ Why using **Interface endpoint**: 
-    + Gateway endpoints only work with resources running in the VPC where they are created. Interface endpoints work with resources running in VPC, and also resources running in on-premises environments. Connectivty from your on-premises environment to the cloud can be provided by AWS Site-to-Site VPN or AWS Direct Connect.
-    + Interface endpoints allow you to connect to services powered by AWS PrivateLink. These services include some AWS services, services hosted by other AWS customers and partners in their own VPCs (referred to as PrivateLink Endpoint Services), and supported AWS Marketplace Partner services. For this workshop, we will focus on connecting to Amazon S3.
-
-![Interface endpoint architecture](/images/5-Workshop/5.4-S3-onprem/diagram3.png)
-
-
-
+After creation, wait until the database status becomes **Available**. Record the endpoint only for approved internal testing, verify that the security group allows traffic from the intended application source, and avoid enabling public access unless the lab explicitly requires it.

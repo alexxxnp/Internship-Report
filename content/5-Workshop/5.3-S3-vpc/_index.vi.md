@@ -6,13 +6,31 @@ chapter : false
 pre : " <b> 5.3. </b> "
 ---
 
-#### Sử dụng Gateway endpoint
+#### Sử dụng Billing and Cost Management
 
-Trong phần này, bạn sẽ tạo một Gateway endpoint để truy cập Amazon S3 từ một EC2 instance. Gateway endpoint sẽ cho phép tải một object lên S3 bucket mà không cần sử dụng Internet Công cộng. Để tạo endpoint, bạn phải chỉ định VPC mà bạn muốn tạo endpoint và dịch vụ (trong trường hợp này là S3) mà bạn muốn thiết lập kết nối.
+Trong phần này, bạn sẽ tạo ra một bảng thống kê số tiền cần đóng hàng tháng khi sử dụng ứng dụng AWS. Công cụ này giúp cho việc kiểm soát số tiền khi sử dụng AWS trở nên hiệu quả hơn. Công cụ này cũng cảnh báo chúng ta khi số tiền trả cho công cụ vượt quá mức cho phép cũng như tính tổng số tiền của các công cụ đang sử dụng.
 
-![overview](/images/5-Workshop/5.3-S3-vpc/diagram2.png)
+Trong quá trình học, nên đặt ngưỡng cảnh báo thấp để phát hiện sớm việc sử dụng tài nguyên ngoài dự kiến. Budget không tự động dừng tài nguyên; công cụ chỉ gửi thông báo để bạn kiểm tra và xử lý.
+![overview](/images/5-Workshop/3.jpg)
+1. Nhấn vào Budgets ở cột bên trái để hiện ra trang chứa nơi bạn tạo trang tính toán chi tiêu cho từng tháng. Nhấn vào nút Create budget nền vàng bên phải để tạo thêm budget mới.
+![Budgets](/images/5-Workshop/3.2.jpg)
+2. Chọn Monthly cost budget để tạo ra ngân sách chi tiêu hàng tháng nếu vượt qua sẽ được gửi thông qua email được cung cấp bên dưới. Có thể thay đổi số tiền nếu vượt qua sẽ hiện cảnh báo.
+![Create budgets](/images/5-Workshop/3.3.jpg)
 
-#### Nội dung
+3. Sau khi tạo Billing and Cost Management sẽ gửi thông báo qua email khi quá tiền hoặc sẽ hiện lên trên chính của AWS cho dễ quan sát. Trong đó gồm có các công cụ đang sử dụng với số tiền phải trả và sơ đồ theo tháng. 
+![Billing and Cost Management](/images/5-Workshop/3.1.jpg)
 
-- [Tạo gateway endpoint](3.1-create-gwe/)
-- [Test gateway endpoint](3.2-test-gwe/)
+Sau khi lưu budget, hãy kiểm tra địa chỉ email và xác nhận trạng thái budget đang hoạt động. Thường xuyên xem bảng chi phí trong suốt workshop, đặc biệt sau khi tạo database, Lambda function, API integration hoặc tài nguyên lưu trữ.
+ 
+
+
+
+
+
+
+
+
+
+
+
+

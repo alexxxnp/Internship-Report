@@ -5,27 +5,24 @@ weight: 1
 chapter: false
 pre: " <b> 3.1. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
+# Replicate Amazon S3 Bucket Configurations Across AWS Regions with AWS Step Functions
+1. Operational Challenges
+Businesses owning thousands of Amazon S3 buckets often face difficulties when scaling their systems to new AWS Regions. While tools like S3 Cross-Region Replication (CRR) or S3 Batch Operations support data (file) replication, they do not support replicating bucket configuration attributes (security policies, lifecycle rules, encryption). Manually reading and recreating each configuration is extremely time-consuming, prone to errors, and poses a significant risk of information security breaches.
 
-# SESSION POLICIES IN AMAZON EKS POD IDENTITY
+2. Architectural Solutions
+An article on the AWS Storage Blog proposes a Serverless model using AWS Step Functions as a central orchestrator:
+- AWS Step Functions: Manages processes, automatically browsing through the list of source S3 buckets in the current Region.
+- AWS Lambda: Calls APIs to extract all metadata/configuration from the source region, then initializes a new bucket and applies those exact settings to the destination region.
 
-Amazon EKS Pod Identity has recently added the session policies feature, allowing you to narrow IAM permissions flexibly and precisely for each pod without needing to create many separate IAM roles. This is an important step forward that helps apply the principle of least privilege more effectively in large-scale Kubernetes environments.
+- Amazon DynamoDB & Amazon CloudWatch: Tracks execution history, audits, and monitors errors in real time.
 
-Key points to know:
+3. Value Proposition:
 
-* A session policy is an inline IAM policy specified when creating or updating a Pod Identity association.
-* Effective permissions = intersection between the IAM role permissions and the session policy → the session policy can only narrow permissions, not expand them.
-* Helps avoid over-permissioning when reusing a single IAM role for multiple workloads with different needs.
-* Supports both same-account and cross-account (via IAM role chaining).
-* Significantly reduces the number of IAM roles that need to be managed, helping avoid hitting IAM quota limits in large clusters.
-* Easily configured through the AWS Management Console, AWS CLI, or AWS SDK when creating an association between a Kubernetes ServiceAccount and an IAM role.
+- 100% Automation: Reduces deployment time from weeks of manual work to minutes.
 
-This feature is especially useful when you have many applications running on the same IAM role but need different permission restrictions (for example: one pod only reads a specific S3 bucket, another pod only calls certain APIs).
+- Absolute Security: Ensures 1:1 consistency in encryption policies and access control across regions.
 
-...Image...
+- Disaster Recovery Ready: Helps businesses quickly re-establish accurate storage infrastructure when recovery is needed after a disaster.
 
-...Link...
-
-...Guide...
+📌 Original article source: https://aws.amazon.com/vi/blogs/storage/replicate-amazon-s3-bucket-configurations-across-aws-regions-with-aws-step-functions/
+![Blog 1](/images/5-Workshop/3.4.jpg)

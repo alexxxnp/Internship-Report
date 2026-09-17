@@ -1,126 +1,141 @@
 ---
 title: "Event 1"
-date: 2024-01-01
+date: 2026-08-22
 weight: 1
 chapter: false
 pre: " <b> 4.1. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy it verbatim** into your report, including this warning.
-{{% /notice %}}
 
-# Summary Report: “GenAI-powered App-DB Modernization workshop”
+# Reflection on AWS First Cloud AI Journey Community Day - August 2026
 
-### Event Objectives
-
-- Share best practices in modern application design
-- Introduce Domain-Driven Design (DDD) and event-driven architecture
-- Provide guidance on selecting the right compute services
-- Present AI tools to support the development lifecycle
+### Event objectives
+- Provide new perspectives on technology trends shaping the future of business.
+- Share insights into Multimodal AI, Agentic Decision Intelligence, Serverless architecture, Agentic AIOps, GenAI migration to AWS, and system optimization.
+- Provide practical live demonstrations and connect attendees with technology experts and cloud career opportunities.
 
 ### Speakers
+- **Ngoc Tran** - Service Reliability Engineer Intern, Accenture
+- **Long Huynh** - Solution Architect, eCloudvalley
+- **Kiet Lam** - Senior DevOps Engineer, FPT Software
+- **Bao Huynh** - Cloud Native Developer, Endava Viet Nam
+- **Xuan Le** - Data Analytics & Insights
+- **Nghi Danh** - AI Engineer, Renova Cloud
+- **Vi Tran** - CloudOps Engineer, VIB
+- **Viet Ly** - DevOps, VPBank
+- **Kiet Nguyen** - Software Engineer, VPBank
 
-- **Jignesh Shah** – Director, Open Source Databases
-- **Erica Liu** – Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** – Assc. Specialist SA, Serverless Amazon Web Services
+### Featured sessions
 
-### Key Highlights
+#### Development Application with AWS Serverless (09:00 - 09:25)
 
-#### Identifying the drawbacks of legacy application architecture
+- **Introduction to Serverless Computing**
+- **What is Serverless?**
+- **Traditional application development vs. Serverless development**
+- **Benefits and trade-offs of Serverless architectures**
+- **AWS Serverless application patterns**
+- **Application demo**
 
-- Long product release cycles → Lost revenue/missed opportunities  
-- Inefficient operations → Reduced productivity, higher costs  
-- Non-compliance with security regulations → Security breaches, loss of reputation  
+#### Optimizing Database Cost & Performance with Data Archiving Strategies (09:25 - 09:50)
 
-#### Transitioning to modern application architecture – Microservices
+- **Understanding database growth and operational challenges**
+- **Data archiving architecture and solution overview**
+- **Initial data load design and implementation**
+- **Daily incremental archiving strategy**
+- **Cost optimization techniques and performance improvements**
+- **Best practices, lessons learned, and key takeaways**
 
-Migrating to a modular system — each function is an **independent service** communicating via **events**, built on three core pillars:
+#### Diffusion and OCR (09:50 - 10:15)
 
-- **Queue Management**: Handle asynchronous tasks  
-- **Caching Strategy**: Optimize performance  
-- **Message Handling**: Flexible inter-service communication  
+- **AWS services for Text-to-Image generation**
+- **AWS services for Image-to-Text extraction and analysis**
+- **Real-world use cases and implementation patterns**
+- **Live demo**
 
-#### Domain-Driven Design (DDD)
+#### Agentic AIOps on AWS: Inside AWS DevOps Agent (10:15 - 10:45)
 
-- **Four-step method**: Identify domain events → arrange timeline → identify actors → define bounded contexts  
-- **Bookstore case study**: Demonstrates real-world DDD application  
-- **Context mapping**: 7 patterns for integrating bounded contexts  
+- **Introduction to AWS DevOps Agent and operational challenges**
+- **Real-world incident troubleshooting and investigation workflows**
+- **Architecture overview, Agent Space, AWS integrations, and security boundaries**
+- **How the Agent forms hypotheses, gathers evidence, and generates recommendations**
+- **Live incident investigation demo**
+- **MCP extensibility, limitations, best practices, and the future of controlled automation**
 
-#### Event-Driven Architecture
+#### From Local to Global: Migrating a GenAI Product to AWS (10:45 - 11:10)
 
-- **3 integration patterns**: Publish/Subscribe, Point-to-point, Streaming  
-- **Benefits**: Loose coupling, scalability, resilience  
-- **Sync vs async comparison**: Understanding the trade-offs  
+- **Challenges and motivations behind GenAI platform migration**
+- **Moving from external AI services to a centralized AWS architecture**
+- **Azure OpenAI to Amazon Bedrock: lessons learned and migration considerations**
+- **Building Agentic AI systems on AWS**
+- **Guardrails, evaluation frameworks, and operational governance**
+- **Key takeaways from real-world migration experiences**
+#### Agentic Decision Intelligence on AWS (11:10 - 11:35)
 
-#### Compute Evolution
+- **Introduction to Agentic Decision Intelligence**
+- **Leveraging AI agents for business decision-making**
+- **Building intelligent decision workflows on AWS**
+- **Banking use cases and industry insights**
+- **Transforming data into business insights with Amazon QuickSight**
+- **Real-world examples and demonstrations**
 
-- **Shared Responsibility Model**: EC2 → ECS → Fargate → Lambda  
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value  
-- **Functions vs Containers**: Criteria for appropriate choice  
+#### AWS Principles Beyond AWS: How AWS Knowledge Transfers to Cloud-Native Roles (11:35 - 12:00)
 
-#### Amazon Q Developer
+- **Beyond the Console: why AWS knowledge remains valuable**
+- **Applying AWS operational principles across cloud-native environments**
+- **Lessons from real-world releases, incident recovery, and security operations**
+- **Building transferable skills for modern engineering roles**
+- **Adopting AWS thinking beyond AWS services**
+- **Career growth opportunities in cloud-native ecosystems**
 
-- **SDLC automation**: From planning to maintenance  
-- **Code transformation**: Java upgrade, .NET modernization  
-- **AWS Transform agents**: VMware, Mainframe, .NET migration  
+### What I learned
 
-### Key Takeaways
+#### Design thinking
+- **Business decision-making:** Use AI agents and Agentic Decision Intelligence to support business decisions.
+- **Cloud-native principles:** Apply AWS thinking and operational principles across cloud-native environments.
+- **Controlled automation:** Combine automation with guardrails and operational governance.
 
-#### Design Mindset
+#### Technical architecture
+- **Serverless architecture:** Understand its trade-offs and apply AWS Serverless application patterns.
+- **Database and archiving strategy:** Build daily incremental archiving to optimize cost and database performance.
+- **GenAI and Agentic AI systems:** Work with Multimodal AI, Diffusion, OCR, and migration from Azure OpenAI to Amazon Bedrock.
+- **AIOps and investigation:** Use AWS DevOps Agent to analyze incidents, form hypotheses, and troubleshoot real problems.
 
-- **Business-first approach**: Always start from the business domain, not the technology  
-- **Ubiquitous language**: Importance of a shared vocabulary between business and tech teams  
-- **Bounded contexts**: Identifying and managing complexity in large systems  
+#### Modernization strategy
+- **Migration roadmap:** Safely move a GenAI product from local to global AWS environments using frameworks and guardrails.
+- **Data-driven insights:** Transform raw data into business value with Amazon QuickSight.
+- **Cost and performance optimization:** Combine data-storage and Serverless optimization for maximum cost efficiency.
 
-#### Technical Architecture
+### Applying the lessons at work
+- Apply Serverless patterns to reduce operating costs.
+- Design daily incremental archiving for large databases to improve query speed.
+- Research Text-to-Image and Image-to-Text/OCR services for applications.
+- Apply AWS DevOps Agent to troubleshooting and operational automation.
+- Create a safe migration roadmap to Amazon Bedrock with an appropriate governance framework.
 
-- **Event storming technique**: Practical method for modeling business processes  
-- Use **event-driven communication** instead of synchronous calls  
-- **Integration patterns**: When to use sync, async, pub/sub, streaming  
-- **Compute spectrum**: Criteria for choosing between VM, containers, and serverless  
+### Event experience
 
-#### Modernization Strategy
+Attending **AWS First Cloud AI Journey Community Day - August 2026** at Bitexco Financial Tower was highly valuable and gave me a broad view of current GenAI, Serverless, and AIOps trends in the cloud.
 
-- **Phased approach**: No rushing — follow a clear roadmap  
-- **7Rs framework**: Multiple modernization paths depending on the application  
-- **ROI measurement**: Cost reduction + business agility  
+#### Learning from experienced speakers
+- Speakers from Accenture, eCloudvalley, FPT Software, Endava, Renova Cloud, VIB, and VPBank shared best practices and practical lessons.
+- Sessions on migrating GenAI to Amazon Bedrock and applying AI agents in banking clarified how to apply technology to real-world problems.
 
-### Applying to Work
+#### Practical technical experience
+- I watched live demonstrations of Diffusion, OCR, and AWS DevOps Agent incident investigation.
+- I learned Serverless architecture patterns and data-archiving methods for optimizing database cost and performance.
+- I explored Agentic Decision Intelligence and how Amazon QuickSight turns data into business perspectives.
 
-- **Apply DDD** to current projects: Event storming sessions with business teams  
-- **Refactor microservices**: Use bounded contexts to define service boundaries  
-- **Implement event-driven patterns**: Replace some sync calls with async messaging  
-- **Adopt serverless**: Pilot AWS Lambda for suitable use cases  
-- **Try Amazon Q Developer**: Integrate into the dev workflow to boost productivity  
+#### Modern tools and networking
+- I learned how AWS DevOps Agent gathers evidence, forms hypotheses, and automates incident response.
+- I explored Agentic AI and operational guardrails when migrating from Azure OpenAI to Amazon Bedrock.
+- The workshop helped me meet experts, update my knowledge, expand career opportunities, and strengthen system-design thinking.
 
-### Event Experience
+#### Key takeaways
+- Modernization and AI adoption require clear data-archiving and cost-optimization strategies.
+- AI agents such as DevOps Agent and Decision Intelligence enable controlled automation and faster work.
+- AWS knowledge and operational thinking are transferable skills for many cloud-native environments.
 
-Attending the **“GenAI-powered App-DB Modernization”** workshop was extremely valuable, giving me a comprehensive view of modernizing applications and databases using advanced methods and tools. Key experiences included:
-
-#### Learning from highly skilled speakers
-- Experts from AWS and major tech organizations shared **best practices** in modern application design.  
-- Through real-world case studies, I gained a deeper understanding of applying **DDD** and **Event-Driven Architecture** to large projects.  
-
-#### Hands-on technical exposure
-- Participating in **event storming** sessions helped me visualize how to **model business processes** into domain events.  
-- Learned how to **split microservices** and define **bounded contexts** to manage large-system complexity.  
-- Understood trade-offs between **synchronous and asynchronous communication** and integration patterns like **pub/sub, point-to-point, streaming**.  
-
-#### Leveraging modern tools
-- Explored **Amazon Q Developer**, an AI tool for SDLC support from planning to maintenance.  
-- Learned to **automate code transformation** and pilot serverless with **AWS Lambda** to improve productivity.  
-
-#### Networking and discussions
-- The workshop offered opportunities to exchange ideas with experts, peers, and business teams, enhancing the **ubiquitous language** between business and tech.  
-- Real-world examples reinforced the importance of the **business-first approach** rather than focusing solely on technology.  
-
-#### Lessons learned
-- Applying DDD and event-driven patterns reduces **coupling** while improving **scalability** and **resilience**.  
-- Modernization requires a **phased approach** with **ROI measurement**; rushing the process can be risky.  
-- AI tools like Amazon Q Developer can significantly **boost productivity** when integrated into the current workflow.  
-
-#### Some event photos
-*Add your event photos here*  
-
-> Overall, the event not only provided technical knowledge but also helped me reshape my thinking about application design, system modernization, and cross-team collaboration.
+#### Event photos
+![Event1](/images/5-Workshop/0.1.jpeg)
+![Event1](/images/5-Workshop/0.2.jpeg)
+![Event1](/images/5-Workshop/0.3.jpeg)
