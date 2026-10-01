@@ -60,7 +60,7 @@
 	"title": "Nhật ký công việc",
 	"tags": [],
 	"description": "",
-	"content": "Thông thường và cũng là tiêu chuẩn, một worklog được thực hiện trong khoảng 3 tháng (trong suốt thời gian thực tập) với nội dung các tuần như sau:\nTuần 1: Làm quen với AWS và các dịch vụ cơ bản trong AWS\nTuần 2: Làm công việc A\u0026hellip;\nTuần 3: Làm công việc B\u0026hellip;\nTuần 4: Làm công việc C\u0026hellip;\nTuần 5: Làm công việc D\u0026hellip;\nTuần 6: Làm công việc E\u0026hellip;\nTuần 7: Làm công việc G\u0026hellip;\nTuần 8: Làm công việc H\u0026hellip;\nTuần 9: Làm công việc I\u0026hellip;\nTuần 10: Làm công việc L\u0026hellip;\nTuần 11: Làm công việc M\u0026hellip;\nTuần 12: Làm công việc N\u0026hellip;\n"
+	"content": "Thông thường và cũng là tiêu chuẩn, một worklog được thực hiện trong khoảng 3 tháng (trong suốt thời gian thực tập) với nội dung các tuần như sau:\nTuần 1: Làm quen với AWS và các dịch vụ cơ bản trong AWS\nTuần 2: Thiết lập ban đầu và tìm hiểu hạ tầng AWS\nTuần 3: Mạng và lưu trữ cơ bản trong AWS\nTuần 4: IAM, chính sách bảo mật và kiểm soát truy cập\nTuần 5: Làm việc với dịch vụ tính toán và cơ chế serverless\nTuần 6: Tích hợp API và thiết lập luồng backend\nTuần 7: Xử lý dữ liệu và triển khai logic ứng dụng\nTuần 8: Giám sát, xử lý sự cố và tối ưu dịch vụ\nTuần 9: Tăng cường bảo mật và thực hành tốt nhất\nTuần 10: Tự động hóa triển khai và cấu hình môi trường\nTuần 11: Kiểm thử tích hợp và xác thực hệ thống\nTuần 12: Ôn tập cuối kỳ, báo cáo và tổng kết dự án\n"
 },
 {
 	"uri": "http://localhost:3000/vi/1-worklog/1.2-week2/",

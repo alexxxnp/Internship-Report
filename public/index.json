@@ -60,7 +60,7 @@
 	"title": "Worklog",
 	"tags": [],
 	"description": "",
-	"content": "Typically, and as a standard, a worklog is carried out over about 3 months (throughout the internship period) with weekly contents as follows:\nWeek 1: Getting familiar with AWS and basic AWS services\nWeek 2: Doing task A\u0026hellip;\nWeek 3: Doing task B\u0026hellip;\nWeek 4: Doing task C\u0026hellip;\nWeek 5: Doing task D\u0026hellip;\nWeek 6: Doing task E\u0026hellip;\nWeek 7: Doing task G\u0026hellip;\nWeek 8: Doing task H\u0026hellip;\nWeek 9: Doing task I\u0026hellip;\nWeek 10: Doing task L\u0026hellip;\nWeek 11: Doing task M\u0026hellip;\nWeek 12: Doing task N\u0026hellip;\n"
+	"content": "Typically, and as a standard, a worklog is carried out over about 3 months (throughout the internship period) with weekly contents as follows:\nWeek 1: Getting familiar with AWS and basic AWS services\nWeek 2: Initial AWS setup and infrastructure exploration\nWeek 3: Networking and storage fundamentals in AWS\nWeek 4: IAM, security policies, and access control\nWeek 5: Working with compute services and serverless basics\nWeek 6: API integration and backend workflow setup\nWeek 7: Data handling and application logic implementation\nWeek 8: Monitoring, troubleshooting, and service optimization\nWeek 9: Security hardening and best practices\nWeek 10: Deployment automation and environment configuration\nWeek 11: Integration testing and system validation\nWeek 12: Final review, reporting, and project wrap-up\n"
 },
 {
 	"uri": "http://localhost:3000/1-worklog/1.2-week2/",
